@@ -97,3 +97,28 @@
 
 // // console.log(`Your user name is: ${userName}`)
 // console.log(userName);
+
+
+
+// Q) For a given array of students marks, find the average marks of the entire class
+// student_marks = [23,4,5,66,78,99,0,11];
+// let sum_marks = 0;
+
+// for (let i of student_marks){
+//     sum_marks = sum_marks + i
+// };
+
+// let class_avg = sum_marks/(student_marks.length);
+// console.log(class_avg);
+
+
+
+// take an array of prices and revert with the values after 10% off
+priceArray = [234,345,4543,22,3454];
+discountedPriceArray = [];
+for (let i of priceArray){
+    discountedPriceArray.push(Math.round(i * 0.9))
+}
+
+console.log(discountedPriceArray)
+console.log(discountedPriceArray.slice(3, 5))
