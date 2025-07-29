@@ -114,11 +114,103 @@
 
 
 // take an array of prices and revert with the values after 10% off
-priceArray = [234,345,4543,22,3454];
-discountedPriceArray = [];
-for (let i of priceArray){
-    discountedPriceArray.push(Math.round(i * 0.9))
-}
+// priceArray = [234,345,4543,22,3454];
+// discountedPriceArray = [];
+// for (let i of priceArray){
+//     discountedPriceArray.push(Math.round(i * 0.9))
+// }
 
-console.log(discountedPriceArray)
-console.log(discountedPriceArray.slice(3, 5))
+// console.log(discountedPriceArray)
+// console.log(discountedPriceArray.slice(3, 5))
+
+
+
+// Funstions as arrow functions:
+// Q) calculate a multiplication
+
+// const arrowMultiply = (a,b) => {return a * b}
+
+// function multiply_v2(a, b){
+//     return a * b
+// }
+
+
+// Q) Create a function which takes a str argumnet and return the count of vowels
+// function vowel_count(str){
+//     let output = 0;
+//     let vowels = ["a", "e", "i", "o", "u"]
+//     for (let val of str){
+//         if (vowels.includes(val)){
+//             output++;
+//         }
+//     }
+//     return output;
+// }
+
+// const arrowVowelCount = (str) => {
+//     let output = 0;
+//     let vowels = ["a", "e", "i", "o", "u"]
+//     for (let val of str){
+//         if (vowels.includes(val)){
+//             output++;
+//         }
+//     }
+//     return output;
+// }
+
+
+// forEach in arrays
+// arr_var = [100,234,43,45,6,78,88,91];
+
+// V1 ans
+// const discountedPrice = (price) => {return price * 0.9}
+
+// arr_var = [100,234,43,45,6,78,88,91]
+// arr_var_2 = arr_var.map(discountedPrice)
+// console.log(arr_var_2)
+
+// V2 ans
+// arr_var.forEach((a) => {console.log(a * 0.9)});
+
+
+// Q) For an array of numbers, print the square of values
+// let arr_num = [1,2,3,4,5,6];
+// let arr_sq_num = arr_num.map((a) => {return a**2});
+// console.log(arr_sq_num)
+// // Filter arrays - Even numbers
+
+// Array - Filter
+// console.log(arr_num.filter((val) => {return val % 2 == 0}))
+
+// const moreThan3 = (a) => {
+//     return a > 3
+// }
+// console.log(arr_num.filter(moreThan3))
+
+
+
+// Array - summarise (sum, min, max, avg etc)
+// array.reduce()
+// arr_num = [1,2,3,4,5,6]
+
+// console.log(`Sum: ${arr_num.reduce((prev, curr) => {return prev + curr})} `)
+// console.log(`Multiply: ${arr_num.reduce((prev, curr) => {return prev * curr})}`)
+// console.log(`Average: ${(arr_num.reduce((prev, curr) => {return prev + curr}))/arr_num.length}`)
+
+
+// Q) filter for marks 90+
+studentMarks = [90,80,54,65,76,89,91,93,96,99,40];
+studentMarks90Plus = studentMarks.filter((a) => {return a > 90});
+console.log(studentMarks90Plus);
+
+
+// Q) Take a num input from user. create an array of numbers 1-n. calculate sum and product of array
+let userInput = prompt("Enter a number:");
+let arr_n = [];
+for (let i = 1; i <= userInput; i++){
+    arr_n.push(i)
+}
+let sumArray = arr_n.reduce((prev, curr) => {return prev + curr})
+let productArray = arr_n.reduce((prev, curr) => {return prev * curr})
+
+console.log(`Sum of an array of numbers 1 - ${userInput} is ${sumArray}.\nAnd product of the same is ${productArray}`)
