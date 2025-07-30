@@ -199,18 +199,18 @@
 
 
 // Q) filter for marks 90+
-studentMarks = [90,80,54,65,76,89,91,93,96,99,40];
-studentMarks90Plus = studentMarks.filter((a) => {return a > 90});
-console.log(studentMarks90Plus);
+// studentMarks = [90,80,54,65,76,89,91,93,96,99,40];
+// studentMarks90Plus = studentMarks.filter((a) => {return a > 90});
+// console.log(studentMarks90Plus);
 
 
 // Q) Take a num input from user. create an array of numbers 1-n. calculate sum and product of array
-let userInput = prompt("Enter a number:");
-let arr_n = [];
-for (let i = 1; i <= userInput; i++){
-    arr_n.push(i)
-}
-let sumArray = arr_n.reduce((prev, curr) => {return prev + curr})
-let productArray = arr_n.reduce((prev, curr) => {return prev * curr})
+// let userInput = prompt("Enter a number:");
+// let arr_n = [];
+// for (let i = 1; i <= userInput; i++){
+//     arr_n.push(i)
+// }
+// let sumArray = arr_n.reduce((prev, curr) => {return prev + curr})
+// let productArray = arr_n.reduce((prev, curr) => {return prev * curr})
 
-console.log(`Sum of an array of numbers 1 - ${userInput} is ${sumArray}.\nAnd product of the same is ${productArray}`)
+// console.log(`Sum of an array of numbers 1 - ${userInput} is ${sumArray}.\nAnd product of the same is ${productArray}`)
