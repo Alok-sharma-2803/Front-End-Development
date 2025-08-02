@@ -1,17 +1,20 @@
 let gameBlocks = window.document.querySelectorAll("button")
 let player_number = 1;
+gameBlocks[0].setAttribute
 
-gameBlocks[0].addEventListener("click", () => {
-    if (player_number === 1 && gameBlocks[0].innerText === ""){
-        gameBlocks[0].innerText = "X"
-        console.log("Switched to X")
+function input_manager(event){
+    let a = event.target;
+    if (a.innerText != ""){
+        alert("Select an empty block!");
+    } else if (player_number === 1){
+        a.innerText = "X";
         player_number++;
-    } else if (player_number === 2 && gameBlocks[0].innerText === ""){
-        gameBlocks[0].innerText = "O"
-        console.log("Switched to O")
+    } else if (player_number == 2){
+        a.innerText = "O";
         player_number--;
-    } else if (gameBlocks[0].innerText === "X" || gameBlocks[0].innerText === "O"){
-        alert("That block is already selected! Select an empty box!")
-        console.log("Incorrect try!")
-    } 
-})
+    }
+}
+
+for (let i = 0; i < gameBlocks.length; i++){
+    gameBlocks[i].addEventListener('click', input_manager)
+}
