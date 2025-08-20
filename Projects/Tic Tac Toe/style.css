@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
+    background-color:yellowgreen;
+    text-align: center;
+}
+
+#game_board{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    align-self: center;
+    padding: 1%;
+}
+
+.game_button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    width: 30%;
+    height: 30%;
+    margin: 1%;
+}
